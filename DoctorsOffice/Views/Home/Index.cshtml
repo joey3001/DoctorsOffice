@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+  <link rel="stylesheet" type="text/css" href="~/css/styles.css"/>
+  @{
+    Layout = "_Layout";
+  }
+
+  <h1>Welcome to the Doctors Office! </h1>
+  <p>@Html.ActionLink("See all Doctors", "Index", "Doctors")</p>   @* first is the language of the link, second is the view, third is the controller  *@
+  <p>@Html.ActionLink("See all Patients", "Index", "Patients")</p>
+
+</html>

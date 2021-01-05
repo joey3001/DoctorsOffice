@@ -7,7 +7,6 @@ namespace DoctorsOffice.Models
 {
   public class DoctorsOfficeContextFactory : IDesignTimeDbContextFactory<DoctorsOfficeContext>
   {
-
     DoctorsOfficeContext IDesignTimeDbContextFactory<DoctorsOfficeContext>.CreateDbContext(string[] args)
     {
       IConfigurationRoot configuration = new ConfigurationBuilder()
