@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DoctorsOffice.Models
 {
   public class Doctor
@@ -8,7 +10,7 @@ namespace DoctorsOffice.Models
     }
     public int DoctorId { get; set; }
     public string Name { get; set;}
-    public string Speciality { get; set; }
+    public string Specialty { get; set; }
     public virtual ICollection<DoctorPatient> Patients { get; set; }
   }
 }
