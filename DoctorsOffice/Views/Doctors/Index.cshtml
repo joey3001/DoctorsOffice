@@ -3,7 +3,10 @@
 }
 
 @using DoctorsOffice.Models;
+@using Microsoft.EntityFrameworkCore;
+@using Microsoft.AspNetCore.Mvc.Rendering;
 @model List<DoctorsOffice.Models.Doctor>;
+@using DoctorsOffice.Controllers;
 
 <h1>Doctors</h1>
 
@@ -15,6 +18,7 @@
 @foreach (Doctor doctor in Model)
 {
   <li>@Html.ActionLink($"{doctor.Name}", "Details", new { id = doctor.DoctorId })</li>
+  <li>@($"{doctor.Patients.Count}")</li>
 }
 
 <p>@Html.ActionLink("Add new doctor", "Create")</p>

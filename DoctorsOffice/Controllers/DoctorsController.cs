@@ -17,8 +17,8 @@ namespace DoctorsOffice.Controllers
     }
 
     public ActionResult Index()
-    {
-      List<Doctor> model = _db.Doctors.ToList();
+    {      
+      List<Doctor> model = _db.Doctors.Include(x => x.Patients).ThenInclude(join => join.Patient).ToList();
       return View(model);
     }
 
